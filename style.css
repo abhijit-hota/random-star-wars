@@ -1,0 +1,46 @@
+@font-face{
+    font-family: 'distant_galaxyregular';
+    src: url('fonts/DISTGRG_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#container {
+    height: 80%;
+    width: 90%;
+    /* background-color: aqua; */
+}
+
+.title{
+    font-family: 'distant_galaxyregular';
+    color: #FFDE06;
+    text-shadow: 0px 2px 19px rgba(0,0,0,0.9);
+    font-size: 50px;
+}
+
+.text {
+    color: white;
+    text-shadow: 0px 2px 19px rgba(0,0,0,0.9);
+    font-family: 'Ubuntu', sans-serif;
+    text-align: justify;
+    font-size: x-large;
+}
+
+.variable {
+    font-size: xx-large;
+
+}
