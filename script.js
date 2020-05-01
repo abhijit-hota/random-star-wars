@@ -39,7 +39,7 @@ const fetchName = function () {
 
     document.body.setAttribute("background", "src/default-bg.jpg")
 
-    heading.textContent = "Loading adventure...";
+    updateBtn.textContent = "Loading adventure...";
 
     let urlList = [];
     let apiNumChar = Math.ceil(Math.random() * 80);
@@ -64,6 +64,7 @@ const fetchName = function () {
 
     const setThat = async function () {
         try {
+            document.body.setAttribute("background", `${imgUrl}`);
             let [character, character2, planet, starship, species, vehicle] =
             await Promise.all(urlList.map(url => fetch(url).then(resp => resp.json().then(val => val.name))))
 
@@ -85,6 +86,7 @@ const fetchName = function () {
 
             heading.textContent = "";
             heading.insertAdjacentHTML("afterbegin", text);
+            updateBtn.textContent = "Find me another!";
 
         } catch (e) {
             heading.textContent = "";
@@ -96,10 +98,10 @@ const fetchName = function () {
     // objImg = new Image();
     // objImg.url = `${imgUrl}`;
     // objImg.onload = function () {
-    // }
+    // !
     
     setThat();
-    // document.body.setAttribute("background", `${imgUrl}`)
+    
 }
 
 updateBtn.addEventListener("click", fetchName);
